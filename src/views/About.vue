@@ -1,15 +1,15 @@
 <template>
   <div class="hello">
-    <Table :table-list="tableData" :header="header" height="300"></Table>
+    <MyTable :table-list="tableData" :header="header"></MyTable>
   </div>
 </template>
 
 <script>
-import Table from "@/components/Table";
+import MyTable from "@/components/MyTable";
 export default {
   name: "About",
   components: {
-    Table,
+    MyTable,
   },
   data() {
     return {
