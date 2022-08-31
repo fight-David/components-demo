@@ -1,15 +1,21 @@
 <template>
   <div class="hello">
-    <MyTable :table-list="tableData" :header="header"></MyTable>
+    <my-table :table-list="tableData" :header="header"></my-table>
+    <my-dialog v-model="detailVisible" >
+      <el-button>sure</el-button>
+      <el-button type="info">cacel</el-button>
+    </my-dialog>
   </div>
 </template>
 
 <script>
 import MyTable from "@/components/MyTable";
+import MyDialog from "@/components/MyDialog";
 export default {
   name: "About",
   components: {
     MyTable,
+    MyDialog,
   },
   data() {
     return {
@@ -49,6 +55,7 @@ export default {
         { w: 1, x: 99.25123, d: 0.23892 },
         { w: 1, x: 255.6666, d: 0.99134 },
       ],
+      detailVisible: true,
     };
   },
   methods: {
